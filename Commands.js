@@ -47,7 +47,7 @@ var Commands = {
         }
     },
     "information": function() {
-        postMessage("Hello! I'm Luna, official PtP mod-bot.\nMy Developers are CraftSpider and Dino.\nAny suggestions or bugs can be sent to my email, Luna.ptp@gmail.com.");
+        postMessage("Hello! I'm Luna, official PtP mod-bot.\nMy Developers are CraftSpider, Dino, and Q. Celestia.\nAny suggestions or bugs can be sent to my email, Luna.ptp@gmail.com.");
     },
     "register": function(args) {
         if (args[0] && args[1]) {
