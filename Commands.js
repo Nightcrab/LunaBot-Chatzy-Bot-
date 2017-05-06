@@ -36,7 +36,9 @@ var Commands = {
     "mexican": function(){
         postMessage("Sweet Dew.");
     },
-    
+    "petdash":  function(){
+        postMessage("¯\\_(ツ)_/¯");
+    },
     "generate": function(type) {
         if (type[0].toUpperCase() == "PROMPT") {
             postMessage("A story about a " + Adjective[randomNumber(0, Adjective.length - 1)] + " " + Noun[randomNumber(0, Noun.length - 1)] + " who must " + Goal[randomNumber(0, Goal.length - 1)] + " while " + Obstacle[randomNumber(0, Goal.length - 1)] + ".");
