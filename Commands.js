@@ -37,7 +37,7 @@ var Commands = {
         postMessage("Sweet Dew.");
     },
     "petdash":  function(){
-        postMessage("¯\\_(ツ)_/¯");
+        postMessage("¯\\_(ツ)_/¯ family friendly chatzy");
     },
     "generate": function(type) {
         if (type[0].toUpperCase() == "PROMPT") {
