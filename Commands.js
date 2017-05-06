@@ -13,7 +13,7 @@ var getTime;
 var loggedOn = {};
 
 //Generator words
-var Noun = ["dog", "cat", "robot", "astronaut", "man", "woman", "person", "child", "giant", "elephant", "zebra", "animal", "box", "tree", "wizard", "mage", "swordsman", "soldier", "inventor", "doctor", "Talos", "dinosaur", "insect", "nerd", "dancer", "singer", "actor", "barista", "acrobat", "gamer", "writer", "dragon"];
+var Noun = ["dog", "cat", "robot", "astronaut", "man", "woman", "person", "child", "giant", "elephant", "zebra", "animal", "box", "tree", "wizard", "mage", "swordsman", "soldier", "inventor", "doctor", "Luna", "dinosaur", "insect", "nerd", "dancer", "singer", "actor", "barista", "acrobat", "gamer", "writer", "dragon"];
 var Adjective = ["happy", "sad", "athletic", "giant", "tiny", "smart", "silly", "unintelligent", "funny", "coffee-loving", "lazy", "spray-tanned", "angry", "disheveled", "annoying", "loud", "quiet", "shy", "extroverted", "jumpy", "ditzy", "strong", "weak", "smiley", "annoyed", "dextrous"];
 var Goal = ["fly around the world", "go on a date", "win a race", "tell their crush how they feel", "find their soulmate", "write a chatbot", "get into university", "graduate high school", "plant a hundred trees", "find their biological parents", "fill their bucket list", "find atlantis", "learn magic", "learn to paint", "drive a car", "pilot a spaceship", "leave Earth", "go home", "redo elementary school", "not spill their beer"];
 var Obstacle = ["learning to read", "fighting aliens", "saving the world", "doing algebra", "losing their hearing", "losing their sense of sight", "learning the language", "hacking the mainframe", "coming of age", "the nuclear apocalypse is happening", "incredibly drunk", "drinking coffee", "surfing", "spying on the bad guys", "smelling terrible", "having a bad hair day", "exploring the new planet", "on the moon", "on Mars"];
@@ -42,13 +42,13 @@ var Commands = {
         }
     },
     "information": function() {
-        postMessage("Hello! I'm Pet Dash, official PtP mod-bot.\nMy Developers are CraftSpider and Dino.\nAny suggestions or bugs can be sent to my email, talos.ptp@gmail.com.");
+        postMessage("Hello! I'm Luna, official PtP mod-bot.\nMy Developers are CraftSpider and Dino.\nAny suggestions or bugs can be sent to my email, Luna.ptp@gmail.com.");
     },
     "register": function(args) {
         if (args[0] && args[1]) {
             if (args[0].match(/[a-zA-Z]/) && args[1].match(/[a-zA-Z]/) && args[0] != "Logger") {
-                var TalosUser = {"password":args[1], "words":0};
-                setStorage(args[0], stringify(TalosUser));
+                var LunaUser = {"password":args[1], "words":0};
+                setStorage(args[0], stringify(LunaUser));
                 postMessage("User " + args[0] + " has been registered!");
             } else {
                 postMessage("Both username and password must contain at least one character, A-Z, case insensitive.");
@@ -70,13 +70,13 @@ var Commands = {
                 postMessage("/me \u200B");
                 break;
             case 3:
-                postMessage("How much you wanna bet wundr broke Pet Dash deliberately?");
+                postMessage("How much you wanna bet wundr broke Luna deliberately?");
                 break;
             case 4:
                 postMessage("This message has 50 characters in it\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B");
                 break;
             case 5:
-                postMessage("wundr's not good at making up dumb things for Pet Dash to say, despite the fact that he himself speaks exclusively in stupid");
+                postMessage("wundr's not good at making up dumb things for Luna to say, despite the fact that he himself speaks exclusively in stupid");
                 break;
             case 6:
                 var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
@@ -230,7 +230,7 @@ var Commands = {
     },
     "help": function(args) {
         if (!args[0]) {
-            var helpList = "Greetings. I'm Pet Dash, chat helper. My commands are:\n";
+            var helpList = "Greetings. I'm Luna, chat helper. My commands are:\n";
             for (var C in Commands) {
                 if (C.toLowerCase() != "roulette") {
                     helpList += "^" + C + "\n";
@@ -250,16 +250,16 @@ var Commands = {
                     postMessage(commandList);
                     break;
                 case "help":
-                    postMessage("Use: ^help [Command Name]\nDescription: Help command, by default gives general information about Pet Dash and a list of available commands. Adding the name of another command as an argument will give a more detailed description of that command. Though you probably figured that out, you're here after all :P");
+                    postMessage("Use: ^help [Command Name]\nDescription: Help command, by default gives general information about Luna and a list of available commands. Adding the name of another command as an argument will give a more detailed description of that command. Though you probably figured that out, you're here after all :P");
                     break;
                 case "generate":
                     postMessage("Use: ^generate <type>\nDescription: Generates a prompt. Currently available types are [b]prompt[/b] and [b]crawl[/b].");
                     break;
                 case "information":
-                    postMessage("Use: ^information\nDescription: Gives a short blurb about Pet Dash.");
+                    postMessage("Use: ^information\nDescription: Gives a short blurb about Luna.");
                     break;
                 case "kill":
-                    postMessage("Use: ^kill\nDescription: Causes Pet Dash to immediately leave the chat, and cease running. Admin only.");
+                    postMessage("Use: ^kill\nDescription: Causes Luna to immediately leave the chat, and cease running. Admin only.");
                     break;
                 case "seen":
                     postMessage("Use: ^seen <Username>\nDescription: Find how long ago this user last posted a message. Returns a time or date in EST.");
@@ -268,7 +268,7 @@ var Commands = {
                     postMessage("Use: ^toggleSleep [time]\nDescription: Turns user commands and related features off or on. An admin only command, to prevent abuse. Also doesn't declare the finish to any active WWs that finish while I'm asleep.");
                     break;
                 case "uptime":
-                    postMessage("Use: ^uptime\nDescription: Gives how long, down to the second, that Talos has been running.");
+                    postMessage("Use: ^uptime\nDescription: Gives how long, down to the second, that Luna has been running.");
                     break;
                 case "users":
                     var commandList = "User commands are:\n";
@@ -280,10 +280,10 @@ var Commands = {
                     postMessage(commandList);
                     break;
                 case "version":
-                    postMessage("Use: ^version\nDescription: The version that Pet Dash is currently running. I always know exactly where I am.");
+                    postMessage("Use: ^version\nDescription: The version that Luna is currently running. I always know exactly where I am.");
                     break;
                 case "wordWar":
-                    postMessage("Use: ^wordWar <length> [keyword] [start time]\nDescription: Starts a Word War, with given keyword and start time if provided. Start time should be two digits, the minute of the hour that the WW should start, and be prefixed by a colon. The length is in minutes, and Pet Dash will say when that many minutes have elapsed.");
+                    postMessage("Use: ^wordWar <length> [keyword] [start time]\nDescription: Starts a Word War, with given keyword and start time if provided. Start time should be two digits, the minute of the hour that the WW should start, and be prefixed by a colon. The length is in minutes, and Luna will say when that many minutes have elapsed.");
                     break;
                 default:
                     postMessage("Sorry, no available help page for that.");
@@ -296,10 +296,10 @@ var UserCommands = {
     "add": function(args, user) {
         if(loggedOn[user] && !isNaN(+args[1])) {
             args[1] = +args[1];
-            var TalosUser = parse(getStorage(loggedOn[user]));
-            var curVal = +TalosUser[args[0]];
-            TalosUser[args[0]] = curVal + args[1];
-            setStorage(loggedOn[user], stringify(TalosUser));
+            var LunaUser = parse(getStorage(loggedOn[user]));
+            var curVal = +LunaUser[args[0]];
+            LunaUser[args[0]] = curVal + args[1];
+            setStorage(loggedOn[user], stringify(LunaUser));
             postMessage(loggedOn[user] + " " + args[0] + " has been succesfully changed from " + curVal + " to " + (curVal + args[1]));
         } else if (loggedOn[user]) {
             postMessage("You can only add number inputs!");
@@ -309,9 +309,9 @@ var UserCommands = {
     },
     "check": function(args, user) {
         if (loggedOn[user]) {
-            var TalosUser = parse(getStorage(loggedOn[user]));
-            if (TalosUser[args[0]] != "undefined" && TalosUser[args[0]] != "null") {
-                var curVal = TalosUser[args[0]];
+            var LunaUser = parse(getStorage(loggedOn[user]));
+            if (LunaUser[args[0]] != "undefined" && LunaUser[args[0]] != "null") {
+                var curVal = LunaUser[args[0]];
                 postMessage(loggedOn[user] + " " + args[0] + " is currently " + curVal);
             } else {
                 postMessage("Your account doesn't have any value called " + args[0]);
@@ -326,11 +326,11 @@ var UserCommands = {
         } else if (!getStorage(args[0])) {
             postMessage("Sorry, I don't know any user named " + args[0]);
         } else {
-            var TalosUser = parse(getStorage(args[0]));
-            if (args[1] == TalosUser.password && !loggedOn[user]) {
+            var LunaUser = parse(getStorage(args[0]));
+            if (args[1] == LunaUser.password && !loggedOn[user]) {
                 loggedOn[user] = args[0];
                 postMessage(user + " has been succesfully logged in!");
-            } else if (args[1] == TalosUser.password) {
+            } else if (args[1] == LunaUser.password) {
                 postMessage("You appear to be already logged on as " + loggedOn[user]);
             } else {
                 postMessage("That password doesn't match what I remember.");
@@ -347,13 +347,13 @@ var UserCommands = {
     },
     "reset": function(args, user) {
         if (loggedOn[user] && args[0]) {
-            var TalosUser = parse(getStorage(loggedOn[user]));
-            for (var key in TalosUser) {
+            var LunaUser = parse(getStorage(loggedOn[user]));
+            for (var key in LunaUser) {
                 if (key == args[0]) {
-                    TalosUser[key] = undefined;
+                    LunaUser[key] = undefined;
                 }
             }
-            setStorage(loggedOn[user], stringify(TalosUser));
+            setStorage(loggedOn[user], stringify(LunaUser));
             postMessage(loggedOn[user] + " " + args[0] + " cleared.");
         } else if (loggedOn[user]) {
             postMessage("I need a value to reset!");
@@ -363,9 +363,9 @@ var UserCommands = {
     },
     "set": function(args, user) {
         if (loggedOn[user] && args[0]) {
-            var TalosUser = parse(getStorage(loggedOn[user]));
-            TalosUser[args[0]] = args[1];
-            setStorage(loggedOn[user], stringify(TalosUser));
+            var LunaUser = parse(getStorage(loggedOn[user]));
+            LunaUser[args[0]] = args[1];
+            setStorage(loggedOn[user], stringify(LunaUser));
             postMessage(loggedOn[user] + " " + args[0] + " has been set to " + args[1] + ".");
         } else if (loggedOn[user]) {
             postMessage("I can only set the value of Words to a number!");
@@ -375,10 +375,10 @@ var UserCommands = {
     },
     "subtract": function(args, user) {
         if(loggedOn[user] && !isNaN(+args[1])) {
-            var TalosUser = parse(getStorage(loggedOn[user]));
-            var curVal = TalosUser[args[0]];
-            TalosUser[args[0]] -= +args[1];
-            setStorage(loggedOn[user], stringify(TalosUser));
+            var LunaUser = parse(getStorage(loggedOn[user]));
+            var curVal = LunaUser[args[0]];
+            LunaUser[args[0]] -= +args[1];
+            setStorage(loggedOn[user], stringify(LunaUser));
             postMessage(loggedOn[user] + " " + args[0] + " has been succesfully changed from " + curVal + " to " + (curVal - +args[1]));
         } else if (loggedOn[user]) {
             postMessage("You can only subtract number inputs!");
@@ -395,7 +395,7 @@ var ADMIN_COMMANDS = {
     },
     "kill": function() {
         postMessage("Et Tu, Brute?");
-        log.fatal("Talos killed on " + new Date());
+        log.fatal("Luna killed on " + new Date());
         setInterval(function() {leaveChat();}, 200);
         window.open('http://www.chatzy.com/', '_self');
     },
@@ -427,8 +427,8 @@ var ADMIN_COMMANDS = {
     "resetUser": function(args) {
         if (args[0]) {
             if (getStorage(args[0])) {
-                TalosUser = getStorage(args[0]);
-                for (var value in TalosUser) {
+                LunaUser = getStorage(args[0]);
+                for (var value in LunaUser) {
                     if (value != "password") {
                         value = undefined;
                     }
