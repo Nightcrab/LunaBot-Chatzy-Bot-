@@ -70,7 +70,7 @@ var Commands = {
                 return;
             }
         }
-        if (newuser[0] != true) {
+        if (newuser[0] == true) {
             for (i=0;i<randomNumber(1,10);i++) {
                length = length+'=';
             }
