@@ -318,7 +318,7 @@ var Commands = {
                             commandList += "^" + UC + "\n";
                         }
                     }
-                    postMessage(commandList);
+                    privateMessage(user, commandList);
                     break;
                 case "version":
                     postMessage("Use: ^version\nDescription: The version that Luna is currently running. I always know exactly where I am.");
