@@ -278,7 +278,7 @@ var Commands = {
                 }
             }
             helpList += "See user commands list by typing '^help users'\nSee admin commands list by typing '^help admins'";
-            privateMessage(helpList, user);
+            privateMessage(user, helpList);
         } else {
             switch (args[0]) {
                 case "admins":
