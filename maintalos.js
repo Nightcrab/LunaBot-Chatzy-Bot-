@@ -8,7 +8,7 @@
 const VERSION = 1.5;
 const BOOT_TIME = new Date();
 const WH_TIME = 0; //What hour Writing Hour should start at, in UTC
-const ADMIN_URL = "http://localhost:8000/Admins.txt"; //URL to pull admin list from
+const ADMIN_URL = "https://raw.githubusercontent.com/Nightcrab/test/master/admins.txt"; //URL to pull admin list from
 const ADMINS = []; //Will be filled with Admin data from file
 const MAIN_URL = "https://rawgit.com/Nightcrab/test/master/"; //URL to load Commands from
 const API_URL = "https://rawgit.com/CraftSpider/ChatzyAPI/master/"; //URL to load ChatzyAPI from
