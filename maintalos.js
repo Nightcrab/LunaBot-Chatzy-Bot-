@@ -148,13 +148,10 @@ function readFile(file) {
 }
 
 function getAdminNames() {
-    getVisitorData(["Alias","UID"]).then(function(visitorData) {
+    getVisitorData(["Alias","UIP"]).then(function(visitorData) {
         adminAliases = [];
         for (var i = 0; i < visitorData.length; i++) {
             var visitor = visitorData[i];
-            if (visitor[1] == "(Email hidden)") {
-                continue;
-            }
             if (visitor[1][0] == "\"") {
                 visitor[1] =  visitor[1].substr(1,visitor[1].length-2);
             }
