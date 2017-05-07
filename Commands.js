@@ -61,7 +61,7 @@ var Commands = {
     "information": function() {
         postMessage("Hello! I'm Luna, official PtP mod-bot.\nMy Developers are CraftSpider, Dino, and Q. Celestia.\nAny suggestions or bugs can be sent to my email, Luna.ptp@gmail.com.");
     },
-    "dick": function(args, user) {
+    "dicklength": function(args, user) {
         let length = '8';
         let newuser = [false,undefined];
         for (i=0;i<userslist.length;i++) {
