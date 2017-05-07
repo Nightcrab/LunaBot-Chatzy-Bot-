@@ -45,7 +45,7 @@ var Commands = {
         {
             args[0] = 1;
         }
-        postMessage("There's "+args[0]+" chicken nugget sir.");
+        postMessage("There's "+args[0]+" chicken nuggets sir.");
     },
     "generate": function(type) {
         if (type[0].toUpperCase() == "PROMPT") {
