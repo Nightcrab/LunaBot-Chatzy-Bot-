@@ -271,13 +271,13 @@ var Commands = {
     },
     "help": function(args, user) {
         if (!args[0]) {
-            var helpList = "Greetings. I'm Luna, chat helper. My commands are:\n";
+            var helpList = "Greetings. I'm Luna, chat helper. My commands are: ";
             for (var C in Commands) {
                 if (C.toLowerCase() != "roulette") {
-                    helpList += "^" + C + "\n";
+                    helpList += "^" + C + ", ";
                 }
             }
-            helpList += "See user commands list by typing '^help users'\nSee admin commands list by typing '^help admins'";
+            helpList += "See user commands list by typing '^help users', See admin commands list by typing '^help admins'";
             privateMessage(user, helpList);
         } else {
             switch (args[0]) {
