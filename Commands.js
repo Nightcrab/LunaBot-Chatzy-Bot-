@@ -11,6 +11,7 @@ var IsSleeping = 0;
 var getTime;
 
 var loggedOn = {};
+var userslist = [];
 
 //Generator words
 var Noun = ["dog", "cat", "robot", "astronaut", "show producer", "unicorn","magical pony", "moderator", "admin", "man", "woman", "person", "child", "giant", "elephant", "zebra", "animal", "box", "tree", "wizard", "mage", "swordsman", "soldier", "inventor", "doctor", "Luna", "dinosaur", "insect", "nerd", "dancer", "singer", "actor", "barista", "acrobat", "gamer", "writer", "dragon"];
@@ -59,6 +60,29 @@ var Commands = {
     },
     "information": function() {
         postMessage("Hello! I'm Luna, official PtP mod-bot.\nMy Developers are CraftSpider, Dino, and Q. Celestia.\nAny suggestions or bugs can be sent to my email, Luna.ptp@gmail.com.");
+    },
+    "dick": function(args, user) {
+        let length = '8';
+        let newuser = [false,undefined];
+        for (i=0;i<userslist.length;i++) {
+            if (userslist[i][0] == user) {
+                newuser = [true,i];
+            }
+        }
+        if (newuser[0] = true) {
+            for (i=0;i<randomNumber(0,20);i++) {
+               length = length+'=';
+            }
+            postMessage(length+'D');
+            userlist.push([user,length.length]);
+        }
+        else
+        {
+            for (i=0;i<newuser[1];i++) {
+               length = length+'=';
+            }
+            postMessage(length+'D');
+        }
     },
     "register": function(args) {
         if (args[0] && args[1]) {
