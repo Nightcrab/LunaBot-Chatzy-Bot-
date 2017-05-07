@@ -1,2 +1,2 @@
 # LunaBot
-Continuation of CraftSpider's TalosBot, in development and undergoing regulaar updates
+Continuation of CraftSpider's TalosBot, in development and undergoing regular updates
