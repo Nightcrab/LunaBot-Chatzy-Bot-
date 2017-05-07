@@ -67,14 +67,15 @@ var Commands = {
         for (i=0;i<userslist.length;i++) {
             if (userslist[i][0] == user) {
                 newuser = [true,i];
+                return;
             }
         }
         if (newuser[0] = true) {
-            for (i=0;i<randomNumber(0,20);i++) {
+            for (i=0;i<randomNumber(1,10);i++) {
                length = length+'=';
             }
             postMessage(length+'D');
-            userlist.push([user,length.length]);
+            userslist.push([user,length.length]);
         }
         else
         {
