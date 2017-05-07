@@ -152,9 +152,6 @@ function getAdminNames() {
         adminAliases = [];
         for (var i = 0; i < visitorData.length; i++) {
             var visitor = visitorData[i];
-            if (visitor[1][0] == "\"") {
-                visitor[1] =  visitor[1].substr(1,visitor[1].length-2);
-            }
             for (var j = 0; j < ADMINS.length; j++) {
                 if (ADMINS[j] == visitor[1]) {
                     adminAliases.push(visitor[0]);
