@@ -269,7 +269,7 @@ var Commands = {
             }
         }
     },
-    "help": function(args) {
+    "help": function(args, user) {
         if (!args[0]) {
             var helpList = "Greetings. I'm Luna, chat helper. My commands are:\n";
             for (var C in Commands) {
@@ -278,7 +278,7 @@ var Commands = {
                 }
             }
             helpList += "See user commands list by typing '^help users'\nSee admin commands list by typing '^help admins'";
-            privateMessage(helpList);
+            privateMessage(helpList, user);
         } else {
             switch (args[0]) {
                 case "admins":
