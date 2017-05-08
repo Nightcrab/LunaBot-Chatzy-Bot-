@@ -47,7 +47,7 @@ var Commands = {
             }
             if (valid == false) {return;}
         }
-        let output = eval(input);
+        let output = ''+eval(input)+'';
         console.log(output);
         postMessage(output);
     },
