@@ -5,7 +5,7 @@
 */
 
 //Constants
-const VERSION = 1.5.1;
+const VERSION = 1.51;
 const BOOT_TIME = new Date();
 const WH_TIME = 0; //What hour Writing Hour should start at, in UTC
 const ADMIN_URL = "https://raw.githubusercontent.com/Nightcrab/test/master/admins.txt"; //URL to pull admin list from
