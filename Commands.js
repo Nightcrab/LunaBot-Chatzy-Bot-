@@ -38,6 +38,9 @@ var Commands = {
     "8ball": function(args) {
         postMessage(answers[randomNumber(0,answers.length)]);
     },
+    "ship": function() {
+       console.log(userslist);
+    },
     "math": function(args) {
         let input = args[0];
         input = input.split('');
