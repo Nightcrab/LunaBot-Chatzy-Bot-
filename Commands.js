@@ -35,10 +35,7 @@ var Commands = {
         postMessage("Primary Developers: CraftSpider, Dino.\nOther contributors: Wundrweapon, HiddenStorys");
     },
     "math": function(args) {
-        let input = '';
-        for (i=0;i<args.length;i++) {
-            input += args[i]
-        }
+        let input = args[0];
         input = input.split('');
         for (i=0;i<input.length;i++) {
             let valid = false;
@@ -48,7 +45,7 @@ var Commands = {
             if (valid == false) {return;}
         }
         let output = ''+eval(input)+'';
-        console.log(output);
+        console.log(output+','+input);
         postMessage(output);
     },
     "mexican": function() {
