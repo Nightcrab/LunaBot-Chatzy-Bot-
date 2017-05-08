@@ -309,6 +309,9 @@ var Commands = {
                     }
                     privateMessage(user, commandList);
                     break;
+                case "math":
+                    postMessage("Use: ^math [expression]\nDescription: Calculator command to help you do your homework. Doesn't do Algebra though.");
+                    break;
                 case "help":
                     postMessage("Use: ^help [Command Name]\nDescription: Help command, by default gives general information about Luna and a list of available commands. Adding the name of another command as an argument will give a more detailed description of that command. Though you probably figured that out, you're here after all :P");
                     break;
