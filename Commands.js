@@ -12,7 +12,8 @@ var getTime;
 
 var loggedOn = {};
 var userslist = [];
-
+var math_terms = ['1','2','3','4','5','6','7','8','9','0','-','+','(',')','/'];
+    
 //Generator words
 var Noun = ["dog", "cat", "robot", "astronaut", "show producer", "unicorn","magical pony", "moderator", "admin", "man", "woman", "person", "child", "giant", "elephant", "zebra", "animal", "box", "tree", "wizard", "mage", "swordsman", "soldier", "inventor", "doctor", "Luna", "dinosaur", "insect", "nerd", "dancer", "singer", "actor", "barista", "acrobat", "gamer", "writer", "dragon"];
 var Adjective = ["happy", "sad", "obsessive", "athletic", "giant", "tiny", "smart", "silly", "unintelligent", "funny", "coffee-loving", "lazy", "spray-tanned", "angry", "disheveled", "annoying", "loud", "quiet", "shy", "extroverted", "jumpy", "ditzy", "strong", "weak", "smiley", "annoyed", "dextrous"];
@@ -33,11 +34,25 @@ var Commands = {
     "credits": function() {
         postMessage("Primary Developers: CraftSpider, Dino.\nOther contributors: Wundrweapon, HiddenStorys");
     },
-    
-    "mexican": function(){
+    "math": function(args) {
+        let input = '';
+        for (i=0;i<args.length;i++) {
+            input += args[i]
+        }
+        input = input.split('');
+        for (i=0;i<input.length;i++) {
+            let valid = false;
+            for (var l in math_terms) {
+                if (input[i] == math_terms[l]) {valid = true;}
+            }
+            if (valid == false) {return;}
+        }
+        postMessage(eval(input));
+    },
+    "mexican": function() {
         postMessage("Sweet Dew.");
     },
-    "petdash":  function(){
+    "petdash":  function() {
         postMessage("¯\\_(ツ)_/¯ family friendly chatzy");
     },
     "chickennugget": function(args){
@@ -285,10 +300,10 @@ var Commands = {
                     var commandList = "Admin Commands are:\n";
                     for (var AC in ADMIN_COMMANDS) {
                         if (ADMIN_COMMANDS.hasOwnProperty(AC)) {
-                            commandList += "^" + AC + "\n";
+                            commandList += "^" + AC + ", ";
                         }
                     }
-                    postMessage(commandList);
+                    privateMessage(user, commandList);
                     break;
                 case "help":
                     postMessage("Use: ^help [Command Name]\nDescription: Help command, by default gives general information about Luna and a list of available commands. Adding the name of another command as an argument will give a more detailed description of that command. Though you probably figured that out, you're here after all :P");
@@ -315,7 +330,7 @@ var Commands = {
                     var commandList = "User commands are:\n";
                     for (var UC in UserCommands) {
                         if (UserCommands.hasOwnProperty(UC)) {
-                            commandList += "^" + UC + "\n";
+                            commandList += "^" + UC + ", ";
                         }
                     }
                     privateMessage(user, commandList);
