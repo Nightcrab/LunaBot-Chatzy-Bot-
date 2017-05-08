@@ -47,7 +47,8 @@ var Commands = {
             }
             if (valid == false) {return;}
         }
-        postMessage(eval(input));
+        let output = eval(input);
+        postMessage(output);
     },
     "mexican": function() {
         postMessage("Sweet Dew.");
