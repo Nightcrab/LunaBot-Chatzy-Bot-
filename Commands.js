@@ -33,7 +33,7 @@ var Action = ["learn to read", "kill a mockingbird", "overthrow Celestia", "jump
 
 var Commands = {
     "credits": function() {
-        postMessage("Primary Developers: CraftSpider, Dino.\nOther contributors: Wundrweapon, HiddenStorys");
+        postMessage("Primary Developers: CraftSpider, Dino.\nOther contributors: Wundrweapon, HiddenStorys, Queen Celestia");
     },
     "8ball": function(args) {
         postMessage(answers[randomNumber(0,answers.length)]);
@@ -86,11 +86,11 @@ var Commands = {
         postMessage("Hello! I'm Luna, official PtP mod-bot.\nMy Developers are CraftSpider, Dino, and Q. Celestia.\nAny suggestions or bugs can be sent to my email, Luna.ptp@gmail.com.");
     },
     "dicklength": function(args, user) {
-        let length = '8';
-        let newuser = [false,undefined];
+        let length = '';
+        let newuser = [true,undefined];
         for (i=0;i<userslist.length;i++) {
             if (userslist[i][0] == user) {
-                newuser = [true,i];
+                newuser = [false,i];
                 return;
             }
         }
@@ -98,7 +98,7 @@ var Commands = {
             for (i=0;i<randomNumber(1,10);i++) {
                length = length+'=';
             }
-            postMessage(length+'D');
+            postMessage('8'+length+'D');
             userslist.push([user,length.length]);
         }
         else
