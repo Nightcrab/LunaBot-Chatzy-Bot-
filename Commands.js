@@ -65,8 +65,7 @@ var Commands = {
         postMessage("¯\\_(ツ)_/¯ family friendly chatzy");
     },
     "chickennugget": function(args){
-        if (!args[0])
-        {
+        if (!args[0]) {
             args[0] = 1;
         }
         postMessage("There's "+args[0]+" chicken nuggets sir.");
