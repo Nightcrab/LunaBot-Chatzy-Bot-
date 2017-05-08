@@ -13,7 +13,8 @@ var getTime;
 var loggedOn = {};
 var userslist = [];
 var math_terms = ['1','2','3','4','5','6','7','8','9','0','-','+','(',')','/'];
-    
+//8ball answers
+var answers = ["Yes.","Of course.","Not really.","Possibly.","It depends.","Why would you say that?","Hell no.","No idea.","Ask my sister."];
 //Generator words
 var Noun = ["dog", "cat", "robot", "astronaut", "show producer", "unicorn","magical pony", "moderator", "admin", "man", "woman", "person", "child", "giant", "elephant", "zebra", "animal", "box", "tree", "wizard", "mage", "swordsman", "soldier", "inventor", "doctor", "Luna", "dinosaur", "insect", "nerd", "dancer", "singer", "actor", "barista", "acrobat", "gamer", "writer", "dragon"];
 var Adjective = ["happy", "sad", "obsessive", "athletic", "giant", "tiny", "smart", "silly", "unintelligent", "funny", "coffee-loving", "lazy", "spray-tanned", "angry", "disheveled", "annoying", "loud", "quiet", "shy", "extroverted", "jumpy", "ditzy", "strong", "weak", "smiley", "annoyed", "dextrous"];
@@ -33,6 +34,9 @@ var Action = ["learn to read", "kill a mockingbird", "overthrow Celestia", "jump
 var Commands = {
     "credits": function() {
         postMessage("Primary Developers: CraftSpider, Dino.\nOther contributors: Wundrweapon, HiddenStorys");
+    },
+    "8ball": function(args) {
+        postMessage(answers[randomNumber(0,answers.length)]);
     },
     "math": function(args) {
         let input = args[0];
