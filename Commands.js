@@ -39,7 +39,6 @@ var Commands = {
         postMessage(answers[randomNumber(0,answers.length)]);
     },
     "ship": function() {
-       getNames();
        let user1 = userAliases[randomNumber(0,userAliases.length)];
        let user2 = userAliases[randomNumber(0,userAliases.length)];
        postMessage(user1+" x "+user2+" <3");
