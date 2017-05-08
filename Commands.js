@@ -45,8 +45,8 @@ var Commands = {
             }
             if (valid == false) {return;}
         }
-        let output = ''+eval(input)+'';
-        console.log(output+','+input);
+        let output = ''+eval(args[0])+'';
+        console.log(output+','+args[0]);
         postMessage(output);
     },
     "mexican": function() {
