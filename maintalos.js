@@ -16,6 +16,7 @@ const API_URL = "https://rawgit.com/CraftSpider/ChatzyAPI/master/"; //URL to loa
 //Control variables
 var CommandsLoaded = false;
 var adminAliases = [];
+var userAliases = [];
 
 //Writing Hour variables
 var WHSwitch = 0;
@@ -158,6 +159,15 @@ function getAdminNames() {
                 }
             }
         }
+    });
+}
+
+function getNames() {
+    userAliases.length = 0;
+    getVisitorData(["Alias"]).then(function(visitorData) {
+	for (i=0;i<visitorData.length;i++) {
+	    userAliases.push(visitorData[i][0]);
+	}
     });
 }
 
