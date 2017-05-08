@@ -37,6 +37,7 @@ var Commands = {
     "math": function(args) {
         let input = args[0];
         input = input.split('');
+        console.log(input);
         for (i=0;i<input.length;i++) {
             let valid = false;
             for (var l in math_terms) {
