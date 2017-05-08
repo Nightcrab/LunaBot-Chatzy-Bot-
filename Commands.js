@@ -105,7 +105,7 @@ var Commands = {
             for (i=0;i<newuser[1];i++) {
                length = length+'=';
             }
-            postMessage(length+'D');
+            postMessage('8'+length+'D');
         }
     },
     "register": function(args) {
@@ -305,7 +305,7 @@ var Commands = {
         } else {
             switch (args[0]) {
                 case "admins":
-                    var commandList = "Admin Commands are:\n";
+                    var commandList = "Admin Commands are: ";
                     for (var AC in ADMIN_COMMANDS) {
                         if (ADMIN_COMMANDS.hasOwnProperty(AC)) {
                             commandList += "^" + AC + ", ";
