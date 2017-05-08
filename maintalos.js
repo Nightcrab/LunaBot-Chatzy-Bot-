@@ -5,7 +5,7 @@
 */
 
 //Constants
-const VERSION = 1.5;
+const VERSION = 1.5.1;
 const BOOT_TIME = new Date();
 const WH_TIME = 0; //What hour Writing Hour should start at, in UTC
 const ADMIN_URL = "https://raw.githubusercontent.com/Nightcrab/test/master/admins.txt"; //URL to pull admin list from
@@ -239,7 +239,7 @@ function readChat() {
                 window.Commands[Command](Args, User);
             } else {
                 log.debug("Failed to parse " + Command);
-                postMessage("Sorry, I don't understand that. May I suggest ^help?");
+                //postMessage("Sorry, I don't understand that. May I suggest ^help?");
             }
 		}
 	}
