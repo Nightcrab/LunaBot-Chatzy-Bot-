@@ -84,30 +84,7 @@ var Commands = {
     "information": function() {
         postMessage("Hello! I'm Luna, official PtP mod-bot.\nMy Developers are CraftSpider, Dino, and Q. Celestia.\nAny suggestions or bugs can be sent to my email, Luna.ptp@gmail.com.");
     },
-    "dicklength": function(args, user) {
-        let length = '';
-        let newuser = [true,undefined];
-        for (i=0;i<userslist.length;i++) {
-            if (userslist[i][0] == user) {
-                newuser = [false,i];
-                return;
-            }
-        }
-        if (newuser[0] == true) {
-            for (i=0;i<randomNumber(1,10);i++) {
-               length = length+'=';
-            }
-            postMessage('8'+length+'D');
-            userslist.push([user,length.length]);
-        }
-        else
-        {
-            for (i=0;i<newuser[1];i++) {
-               length = length+'=';
-            }
-            postMessage('8'+length+'D');
-        }
-    },
+    
     "register": function(args) {
         if (args[0] && args[1]) {
             if (args[0].match(/[a-zA-Z]/) && args[1].match(/[a-zA-Z]/) && args[0] != "Logger") {
